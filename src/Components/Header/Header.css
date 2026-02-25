@@ -1,0 +1,84 @@
+
+
+.header-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 0 5%;
+  background: rgba(5, 5, 5, 0.8); 
+  backdrop-filter: blur(15px); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.header-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.brand-dot {
+  color: #b87333; 
+}
+
+.header-links {
+  display: flex;
+  gap: 40px; 
+}
+
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #999;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -5px;
+  left: 0;
+  background-color: #b87333;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.instagram-highlight {
+  color: #b87333;
+  font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+  .header-links {
+    gap: 20px;
+  }
+  .nav-link {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+}

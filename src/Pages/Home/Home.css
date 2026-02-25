@@ -1,0 +1,163 @@
+.home-hero {
+  background-color: #0a0a0a;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center; /* Centraliza o bloco de texto verticalmente */
+  padding: 0 10%; /* Espaçamento da borda esquerda */
+  box-sizing: border-box;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../assets/dk.jpg);
+  background-size: cover;      /* Faz a imagem preencher toda a tela sem esticar */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Mata a duplicação */
+  background-attachment: fixed;
+}
+
+.content-limit {
+  max-width: 700px; /* Limita o texto para não atravessar a tela toda */
+  animation: fadeIn 1.2s ease-out;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif; /* */
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.accent-italic {
+  font-style: italic;
+  color: #b87333; /* copper-accent */
+}
+
+.hero-subtitle {
+  font-family: 'Outfit', sans-serif; /* */
+  font-size: 1.2rem;
+  color: #777;
+  max-width: 500px;
+  line-height: 1.8;
+  margin-bottom: 3.5rem;
+  letter-spacing: 0.5px;
+}
+
+.highlight {
+  color: #ddd;
+}
+
+.course-tag {
+  color: #b87333; /* Bronze */
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.portfolio-cta {
+  background-color: #b87333; 
+  color: #fff !important;
+  padding: 20px 40px;
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: all 0.4s ease;
+  border: 1px solid #b87333;
+  box-shadow: 0 10px 30px rgba(184, 115, 51, 0.2);
+}
+
+.cta-line {
+  width: 45px;
+  height: 1px;
+  background-color: #b87333;
+  margin-top: 10px;
+  transition: width 0.4s ease;
+}
+
+.portfolio-cta:hover .cta-line {
+  width: 100px;
+}
+
+.portfolio-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(184, 115, 51, 0.6);
+  background-color: #d48a4a;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    padding: 0 5%;
+    justify-content: center;
+    text-align: center;
+  }
+  .portfolio-cta {
+    align-items: center;
+    width: 100%;
+  }
+}
+
+/* Espaçamento e Fundo da seção de Portfolio */
+.portfolio-section {
+  background-color: #050505; /* Preto absoluto */
+  padding: 100px 10%;
+  min-height: 100vh;
+}
+
+.portfolio-header {
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.portfolio-subtitle {
+  color: #b87333; /* Bronze */
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.portfolio-main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #fff;
+}
+
+/* O Grid que organiza os cards */
+.portfolio-grid {
+  display: grid;
+  /* Cria colunas que se ajustam sozinhas (mínimo 300px cada) */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px; /* Espaço entre as fotos */
+}
+
+/* Footer elegante */
+.home-footer {
+  padding: 50px 10%;
+  background-color: #050505;
+  border-top: 1px solid #111;
+  text-align: center;
+}
+
+.home-footer p {
+  color: #444;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+
+/* Garante que o scroll suave funcione ao clicar no botão "VER PORTFÓLIO" */
+html {
+  scroll-behavior: smooth;
+}
